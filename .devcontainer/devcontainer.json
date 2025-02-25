@@ -1,0 +1,23 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+  "name": "A/B tests React",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "mounts": [
+    {
+      "source": "${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig",
+      "target": "/etc/gitconfig",
+      "type": "bind"
+    }
+  ],
+  "postCreateCommand": "npm i"
+}
