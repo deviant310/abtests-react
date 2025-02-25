@@ -18,6 +18,5 @@
       "target": "/etc/gitconfig",
       "type": "bind"
     }
-  ],
-  "postCreateCommand": "npm i"
+  ]
 }
